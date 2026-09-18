@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Tech Fest 2026",
+    "date": "2026-08-20",
+    "venue": "College Auditorium",
+    "category": "Technical",
+    "description": "Technology exhibitions, project demonstrations and competitions."
+  },
+  {
+    "id": 2,
+    "title": "Sports Day",
+    "date": "2026-09-10",
+    "venue": "College Ground",
+    "category": "Sports",
+    "description": "Inter-department sports competitions and team events."
+  },
+  {
+    "id": 3,
+    "title": "Coding Workshop",
+    "date": "2026-09-25",
+    "venue": "Computer Lab",
+    "category": "Workshop",
+    "description": "Hands-on coding session for web and programming fundamentals."
+  },
+  {
+    "id": 4,
+    "title": "AI Awareness Seminar",
+    "date": "2026-10-03",
+    "venue": "Seminar Hall A",
+    "category": "Seminar",
+    "description": "Introduction to responsible AI and modern applications."
+  },
+  {
+    "id": 5,
+    "title": "Web Design Challenge",
+    "date": "2026-10-08",
+    "venue": "Lab 2",
+    "category": "Technical",
+    "description": "Frontend design challenge using HTML, CSS and JavaScript."
+  },
+  {
+    "id": 6,
+    "title": "Career Guidance Talk",
+    "date": "2026-10-15",
+    "venue": "Main Hall",
+    "category": "Seminar",
+    "description": "Industry guidance on internships, skills and placements."
+  },
+  {
+    "id": 7,
+    "title": "Cyber Security Workshop",
+    "date": "2026-10-22",
+    "venue": "Network Lab",
+    "category": "Workshop",
+    "description": "Basics of cyber safety, secure browsing and network security."
+  },
+  {
+    "id": 8,
+    "title": "Cultural Evening",
+    "date": "2026-11-02",
+    "venue": "Open Air Theatre",
+    "category": "Cultural",
+    "description": "Music, dance and student cultural performances."
+  },
+  {
+    "id": 9,
+    "title": "Hackathon 2026",
+    "date": "2026-11-09",
+    "venue": "Innovation Center",
+    "category": "Technical",
+    "description": "Team-based problem solving and prototype development."
+  },
+  {
+    "id": 10,
+    "title": "Photography Contest",
+    "date": "2026-11-14",
+    "venue": "Student Activity Center",
+    "category": "Cultural",
+    "description": "Campus photography competition for students."
+  },
+  {
+    "id": 11,
+    "title": "Data Structures Bootcamp",
+    "date": "2026-11-20",
+    "venue": "Lab 1",
+    "category": "Workshop",
+    "description": "Revision of stacks, queues, linked lists and trees."
+  },
+  {
+    "id": 12,
+    "title": "Startup Talk",
+    "date": "2026-11-27",
+    "venue": "Seminar Hall B",
+    "category": "Seminar",
+    "description": "Entrepreneurship session with startup examples and ideas."
+  },
+  {
+    "id": 13,
+    "title": "Cricket Tournament",
+    "date": "2026-12-03",
+    "venue": "College Ground",
+    "category": "Sports",
+    "description": "Department-level cricket tournament."
+  },
+  {
+    "id": 14,
+    "title": "Poster Presentation",
+    "date": "2026-12-08",
+    "venue": "Academic Block",
+    "category": "Technical",
+    "description": "Students present posters on emerging technology topics."
+  },
+  {
+    "id": 15,
+    "title": "Annual Day",
+    "date": "2026-12-18",
+    "venue": "College Auditorium",
+    "category": "Cultural",
+    "description": "Annual celebration with awards and performances."
+  }
+]

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Practical 6</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+    <script type="module" src="js/practical6.js"></script>
+</head>
+<body data-page="events">
+<header>
+    <h1>StudentHub Portal</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="events.html">Events</a>
+        <a href="profile.html">Profile</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="attendance.html">Attendance</a>
+    </nav>
+    <hr>
+</header>
+
+<main>
+    <p><a href="index.html">Home</a> &gt; Events</p>
+
+    <section>
+        <h2> External JSON Data</h2>
+        <p class="p6-intro">
+            This page uses the Fetch API to load external JSON files and dynamically render
+            events, student profiles and FAQs. Use the controls below to search, filter, sort
+            and move through paginated results.
+        </p>
+
+        <div class="p6-dataset-tabs" aria-label="Choose JSON dataset">
+            <button type="button" class="p6-tab active" data-dataset="events" aria-pressed="true">Events</button>
+            <button type="button" class="p6-tab" data-dataset="students" aria-pressed="false">Students</button>
+            <button type="button" class="p6-tab" data-dataset="faqs" aria-pressed="false">FAQs</button>
+        </div>
+
+        <div class="p6-controls">
+            <div>
+                <label for="p6Search">Search</label>
+                <input type="search" id="p6Search" placeholder="Type to search...">
+            </div>
+
+            <div>
+                <label for="p6Filter">Filter</label>
+                <select id="p6Filter">
+                    <option value="all">All</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="p6Sort">Sort</label>
+                <select id="p6Sort"></select>
+            </div>
+        </div>
+
+        <div id="p6Status" class="p6-status" role="status" aria-live="polite">
+            Preparing data...
+        </div>
+
+        <div id="p6DataContainer" class="p6-grid" aria-live="polite"></div>
+
+        <div class="p6-pagination" aria-label="Pagination">
+            <button type="button" id="p6Prev" class="p6-page-button">Previous</button>
+            <span id="p6PageInfo">Page 1 of 1</span>
+            <button type="button" id="p6Next" class="p6-page-button">Next</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>Intermediate Extension - Dependent Dropdowns</h2>
+        <p>Select a country, then its state, then a city.</p>
+
+        <div class="dependent-grid">
+            <div>
+                <label for="countrySelect">Country</label>
+                <select id="countrySelect">
+                    <option value="">-- Select Country --</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="stateSelect">State</label>
+                <select id="stateSelect" disabled>
+                    <option value="">-- Select State --</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="citySelect">City</label>
+                <select id="citySelect" disabled>
+                    <option value="">-- Select City --</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <aside>
+        <h3>Practical 6 Note</h3>
+        <p>
+            Run this project using VS Code <strong>Live Server</strong>. Fetch API may be blocked
+            when HTML is opened directly with the <code>file://</code> protocol.
+        </p>
+    </aside>
+</main>
+
+<footer>
+    <hr>
+    <p>© 2026 StudentHub Portal</p>
+</footer>
+</body>
+</html>
