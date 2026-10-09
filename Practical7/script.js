@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector("nav");
     const header = document.querySelector("header");
 
+    // ===============================
+    // Practical 4 - Hamburger Menu
+    // ===============================
+
     if (nav && header) {
 
         const menuButton = document.createElement("button");
@@ -50,6 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 
+
+    // ===============================
+    // Practical 4 - Theme Switcher
+    // ===============================
 
     const themeButton =
         document.createElement("button");
@@ -114,6 +122,11 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 
+
+    // ===============================
+    // Practical 4 - Notification Banner
+    // ===============================
+
     const notification =
         document.createElement("div");
 
@@ -157,6 +170,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
     );
+
+
+    // ===============================
+    // Practical 4 - Modal Popup
+    // ===============================
 
     const modal =
         document.createElement("div");
@@ -262,6 +280,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     );
 
+
+    // ===============================
+    // Practical 4 - FAQ
+    // ===============================
 
     const faqSection =
         document.createElement(
@@ -382,6 +404,10 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
+    // ==========================================
+    // Normal Forms Validation
+    // ==========================================
+
     const forms =
         document.querySelectorAll(
             "form"
@@ -390,6 +416,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     forms.forEach(
         function (form) {
+
+            // Registration form has
+            // separate validation below
+
             if (
                 form.id ===
                 "registrationForm"
@@ -468,6 +498,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     );
 
+
+    // ==================================================
+    // Practical 5
+    // Registration Form Frontend Validation
+    // ==================================================
+
     const registrationForm =
         document.getElementById(
             "registrationForm"
@@ -533,6 +569,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 "strengthText"
             );
 
+
+        // ===============================
+        // Regular Expressions
+        // ===============================
+
         const nameRegex =
             /^[A-Za-z]+(?:[ '-][A-Za-z]+)*$/;
 
@@ -547,6 +588,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const passwordRegex =
             /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^])[A-Za-z\d@$!%*?&#^]{8,}$/;
+
+
+        // ===============================
+        // Show Error
+        // ===============================
 
         function showFieldError(
             field,
@@ -575,6 +621,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 "true"
             );
         }
+
+
+        // ===============================
+        // Show Valid
+        // ===============================
+
         function showFieldValid(
             field,
             errorId
@@ -602,6 +654,10 @@ document.addEventListener("DOMContentLoaded", function () {
             );
         }
 
+
+        // ===============================
+        // Name Validation
+        // ===============================
 
         function validateName() {
 
@@ -1220,7 +1276,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (isValid) {
 
                     successMessage.textContent =
-                        "Registration successful! All entered details are valid.";
+                        "Client-side validation passed. Sending data securely to PHP...";
+
+                    // Practical 7: submit to PHP after frontend validation.
+                    registrationForm.submit();
 
                 } else {
 

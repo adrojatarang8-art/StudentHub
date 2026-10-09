@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Patel",
+    "enrollment": "25CE101",
+    "course": "B.Tech CE",
+    "semester": 3,
+    "city": "Anand",
+    "skill": "C++"
+  },
+  {
+    "id": 2,
+    "name": "Diya Shah",
+    "enrollment": "25CE102",
+    "course": "B.Tech CE",
+    "semester": 3,
+    "city": "Vadodara",
+    "skill": "Java"
+  },
+  {
+    "id": 3,
+    "name": "Vivaan Mehta",
+    "enrollment": "25CE103",
+    "course": "B.Tech CE",
+    "semester": 3,
+    "city": "Ahmedabad",
+    "skill": "JavaScript"
+  },
+  {
+    "id": 4,
+    "name": "Anaya Desai",
+    "enrollment": "25CE104",
+    "course": "B.Tech CE",
+    "semester": 3,
+    "city": "Surat",
+    "skill": "HTML/CSS"
+  },
+  {
+    "id": 5,
+    "name": "Krish Joshi",
+    "enrollment": "25CE105",
+    "course": "B.Tech CE",
+    "semester": 3,
+    "city": "Rajkot",
+    "skill": "Python"
+  },
+  {
+    "id": 6,
+    "name": "Myra Trivedi",
+    "enrollment": "25IT106",
+    "course": "B.Tech IT",
+    "semester": 3,
+    "city": "Nadiad",
+    "skill": "UI Design"
+  },
+  {
+    "id": 7,
+    "name": "Arjun Rana",
+    "enrollment": "25IT107",
+    "course": "B.Tech IT",
+    "semester": 3,
+    "city": "Bharuch",
+    "skill": "Networking"
+  },
+  {
+    "id": 8,
+    "name": "Ira Bhatt",
+    "enrollment": "25IT108",
+    "course": "B.Tech IT",
+    "semester": 3,
+    "city": "Gandhinagar",
+    "skill": "SQL"
+  },
+  {
+    "id": 9,
+    "name": "Reyansh Modi",
+    "enrollment": "25CS109",
+    "course": "B.Tech CSE",
+    "semester": 3,
+    "city": "Mehsana",
+    "skill": "DSA"
+  },
+  {
+    "id": 10,
+    "name": "Kiara Dave",
+    "enrollment": "25CS110",
+    "course": "B.Tech CSE",
+    "semester": 3,
+    "city": "Anand",
+    "skill": "React"
+  },
+  {
+    "id": 11,
+    "name": "Dev Panchal",
+    "enrollment": "25CE111",
+    "course": "B.Tech CE",
+    "semester": 3,
+    "city": "Morbi",
+    "skill": "Arduino"
+  },
+  {
+    "id": 12,
+    "name": "Riya Vyas",
+    "enrollment": "25IT112",
+    "course": "B.Tech IT",
+    "semester": 3,
+    "city": "Vadodara",
+    "skill": "PHP"
+  },
+  {
+    "id": 13,
+    "name": "Advik Soni",
+    "enrollment": "25CS113",
+    "course": "B.Tech CSE",
+    "semester": 3,
+    "city": "Ahmedabad",
+    "skill": "Git"
+  },
+  {
+    "id": 14,
+    "name": "Sara Patel",
+    "enrollment": "25CE114",
+    "course": "B.Tech CE",
+    "semester": 3,
+    "city": "Surat",
+    "skill": "Web Development"
+  },
+  {
+    "id": 15,
+    "name": "Kabir Shah",
+    "enrollment": "25IT115",
+    "course": "B.Tech IT",
+    "semester": 3,
+    "city": "Rajkot",
+    "skill": "Cyber Security"
+  }
+]
