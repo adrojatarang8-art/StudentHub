@@ -1,0 +1,41 @@
+Practical 7 - Test Cases
+========================
+
+1. Valid registration
+   Input: Valid name, email, mobile, strong password, matching confirmation, course, year, gender, terms.
+   Expected: Success page and one new record in both CSV and JSON.
+
+2. Invalid email
+   Input: tarang@abc
+   Expected: "Enter a valid email address."
+
+3. Invalid mobile
+   Input: 12345
+   Expected: "Enter a valid 10-digit Indian mobile number."
+
+4. Weak password
+   Input: abc123
+   Expected: Password strength validation error.
+
+5. Password mismatch
+   Input: Different password and confirmation
+   Expected: "Password and confirm password do not match."
+
+6. Missing required selection
+   Input: Course/year/gender not selected
+   Expected: Clear validation error.
+
+7. Terms unchecked
+   Expected: Terms and Conditions validation error.
+
+8. GET processor directly
+   URL: process_registration.php
+   Expected: Invalid Request because POST is required.
+
+9. CSRF failure
+   Input: POST with missing/changed token
+   Expected: Security Check Failed.
+
+10. Multiple submissions
+    Submit several valid entries.
+    Expected: Each submission adds a new row/object; previous records remain available.

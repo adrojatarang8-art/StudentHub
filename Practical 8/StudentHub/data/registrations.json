@@ -1,0 +1,12 @@
+[
+    {
+        "created_at": "2026-10-09 14:51:05",
+        "name": "Tarang Adroja",
+        "email": "adrojatarang8@gmail.com",
+        "mobile": "7984166479",
+        "course": "B.Tech",
+        "year": "1",
+        "gender": "Male",
+        "password_hash": "$2y$10$jy3Ma4BpiBdqsjjkDzyG6egJmAvoKWBd/Osbr7swmkcfCfokRyTmm"
+    }
+]
