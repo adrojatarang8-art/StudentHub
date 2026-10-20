@@ -1,0 +1,13 @@
+PRACTICAL 10 - STUDENTHUB PROJECT (XAMPP)
+=========================================
+1. Copy the enclosed StudentHub folder to C:\xampp\htdocs\StudentHub
+2. Start Apache and MySQL.
+3. In phpMyAdmin, select studenthub_db and import StudentHub/practical10.sql
+   (if practical9 tables are absent, first import StudentHub/secure_accounts.sql).
+4. Create student/admin test accounts at http://localhost/StudentHub/secure_account.php
+5. Promote one account to admin with SQL (see README-Practical10.txt).
+6. Login here: http://localhost/StudentHub/login.php
+7. See StudentHub/README-Practical10.txt for full setup and screenshot tests.
+
+Previous Practical 7-9 code is included. No XAMPP browser screenshots
+are claimed as completed; capture real results after running the project.
