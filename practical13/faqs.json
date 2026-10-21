@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "question": "What is StudentHub?",
+    "answer": "StudentHub is a portal for managing student academic activities in one place.",
+    "category": "General"
+  },
+  {
+    "id": 2,
+    "question": "How do I register?",
+    "answer": "Open the Register page, complete all required fields and submit the form.",
+    "category": "Account"
+  },
+  {
+    "id": 3,
+    "question": "How do I log in?",
+    "answer": "Use your registered email and password on the Login page.",
+    "category": "Account"
+  },
+  {
+    "id": 4,
+    "question": "Where can I see attendance?",
+    "answer": "Open the Attendance page from the navigation menu.",
+    "category": "Academic"
+  },
+  {
+    "id": 5,
+    "question": "Where is the timetable?",
+    "answer": "The weekly timetable is available on the Timetable page.",
+    "category": "Academic"
+  },
+  {
+    "id": 6,
+    "question": "How can I view events?",
+    "answer": "Use the Events page to browse current event information.",
+    "category": "Events"
+  },
+  {
+    "id": 7,
+    "question": "Can I search event data?",
+    "answer": "Yes. Practical 6 provides search, filter, sorting and pagination controls.",
+    "category": "Events"
+  },
+  {
+    "id": 8,
+    "question": "What happens if JSON loading fails?",
+    "answer": "The page tries to use the latest cached JSON data from localStorage.",
+    "category": "Technical"
+  },
+  {
+    "id": 9,
+    "question": "Why should I use Live Server?",
+    "answer": "Fetch API normally requires the project to be served through HTTP instead of opening the HTML file directly.",
+    "category": "Technical"
+  },
+  {
+    "id": 10,
+    "question": "Is dark mode available?",
+    "answer": "Yes. The theme button stores the selected theme in localStorage.",
+    "category": "General"
+  },
+  {
+    "id": 11,
+    "question": "How do I update my profile?",
+    "answer": "Use the Profile page and the available profile options.",
+    "category": "Account"
+  },
+  {
+    "id": 12,
+    "question": "What attendance should students maintain?",
+    "answer": "Students should follow the attendance rule shown on the Attendance page.",
+    "category": "Academic"
+  },
+  {
+    "id": 13,
+    "question": "Can the data be sorted?",
+    "answer": "Yes. Use the Sort dropdown on the Practical 6 section.",
+    "category": "Technical"
+  },
+  {
+    "id": 14,
+    "question": "How many records are shown per page?",
+    "answer": "Five records are shown per page in this implementation.",
+    "category": "Technical"
+  },
+  {
+    "id": 15,
+    "question": "How can I contact the administrator?",
+    "answer": "Open the Contact page and submit the contact form.",
+    "category": "General"
+  }
+]

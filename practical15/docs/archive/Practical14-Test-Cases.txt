@@ -1,0 +1,38 @@
+PRACTICAL 14 — TEST CASES & EVIDENCE CHECKLIST
+============================================
+Cases are expected outcomes, NOT claims of completed browser tests.
+Mark PASS only after verification on your own Windows XAMPP project.
+
+ID   Test                         Steps                             Expected evidence
+01   SQL migration                Import practical14.sql             audit_logs table and status column created
+02   Live statistics              Open admin.php as admin            Accounts, students, events, registrations shown
+03   Latest registrations         Find Recent registrations          Student + Event + registered_at from MySQL
+04   Monthly analytics             Check 6-month chart               Dynamic bars by registered_at month
+05   Role-based admin menu        Login as p10_admin01                Admin / students / AJAX links shown
+06   Student restriction          Login as p10_student01, admin.php  HTTP 403 access denied
+07   Student menu                 Open dashboard.php as student      Student menu only; no admin links
+08   Status deactivate            Disable disposable student        status inactive; cannot log in
+09   Audit of deactivate          Refresh dashboard audit section   account_deactivated row with actor/target/time
+10   Status restore               Activate same student             status active, account_activated logged
+11   Audit of event CRUD          Add/Edit/Delete test AJAX event   event_created/updated/deleted entries
+12   Audit of student CRUD        Add/Edit disposable test student  student_created/updated entries
+13   CSRF                           POST invalid token                 HTTP 403 no status update
+14   GET status toggle            Open account_status.php via GET   Not allowed / login redirect as appropriate
+15   Self deactivate              Attempt on current admin          Blocked
+16   Session/logout               Log out then open admin.php       Redirect to login
+17   Inactive remembered user     Deactivate user with remember me  Token revoked, later login blocked
+18   SQL re-import                Import practical14.sql twice       No table drops, earlier data preserved
+
+Evidence recommended:
+Fig 1: SQL import; Fig 2: Dashboard stats; Fig 3: Latest registrations;
+Fig 4: Role menu; Fig 5: Student access denied; Fig 6: Status toggle;
+Fig 7: audit_logs table; Fig 8: Monthly analytics; Fig 9: Event audit entries.
+Report should include only screenshots of tests you actually perform.
+
+Short viva answers:
+Q How are statistics loaded? A By SELECT COUNT(*) queries on MySQL tables.
+Q How is admin-only access implemented? A auth_require_role('admin') verifies role and active status in MySQL on each request.
+Q Why is nav alone insufficient? A Hidden links do not prevent unauthorized direct URLs; server enforces authorization.
+Q What is audit_logs? A A database table recording admin action, target, actor and timestamp.
+Q How is status toggle safe? A POST + CSRF + prepared UPDATE + transaction + audit entry, and self-deactivation safeguard.
+Q How are monthly bars calculated? A COUNT registrations grouped by year-month of registered_at.

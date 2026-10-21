@@ -1,0 +1,64 @@
+PRACTICAL 11 — STUDENTHUB COMPLETE PROJECT
+==========================================
+
+CORRECT FOLDER NAME: practical11
+
+DIRECTORY STRUCTURE AFTER EXTRACTING THE ZIP:
+C:\xampp\htdocs\practical11\
+    index.html
+    login.php
+    admin.php
+    student_directory.php
+    student_export.php
+    p11_student_helpers.php
+    practical11.sql
+    Practical11_Full_Install.sql
+    css\style.css
+    js\...
+    data\...
+    (and remaining original StudentHub project files)
+
+IMPORTANT: There is NO extra StudentHub/ or practical10/ folder in this ZIP.
+
+INSTALLATION (XAMPP / WINDOWS)
+-----------------------------
+1) Open C:\xampp\htdocs\ and remove/rename an outdated practical11 folder
+   AFTER backing up any work saved there.
+2) Extract practical11.zip directly to C:\xampp\htdocs\.
+   IMPORTANT: Extract the ZIP contents, NOT into a newly created parent folder.
+3) Verify this file physically exists:
+       C:\xampp\htdocs\practical11\student_directory.php
+4) Start Apache and MySQL in XAMPP.
+5) Open http://localhost/phpmyadmin/
+   - Existing studenthub_db with your Practical 10 data? Import practical11.sql.
+   - Brand-new setup with NO old data? Import Practical11_Full_Install.sql.
+   Do not import both SQL files. Existing-db migration preserves records.
+6) Login as admin:
+       http://localhost/practical11/login.php
+7) Student Management:
+       http://localhost/practical11/student_directory.php
+8) Home:
+       http://localhost/practical11/
+
+FIRST-TIME ADMIN ACCOUNT (ONLY IF YOU HAVE NO ADMIN):
+- Create your account at http://localhost/practical11/secure_account.php
+- Open phpMyAdmin -> studenthub_db -> SQL tab, run:
+    UPDATE user_accounts SET role='admin' WHERE username='your_username';
+  (Replace your_username with the one YOU registered.)
+- Logout and login again. Student accounts cannot access the admin CRUD page.
+
+TROUBLESHOOTING
+---------------
+404: Confirm the exact file path in Step 3; do NOT use
+     http://localhost/practical10/StudentHub/... or the old folder name.
+Redirects to login.php: Normal if not signed in.
+Access denied: You signed in with a student role, not admin.
+DB column missing: Import practical11.sql on the old database.
+Apache on port 8080? Use http://localhost:8080/practical11/...
+
+Includes all original Practical 7-10 StudentHub files plus Practical 11:
+MySQLi prepared queries, CRUD, search, course/status filters, pagination,
+CSV export, confirmation, soft delete, restore, seed data and test cases.
+
+Read README-Practical11.txt for more detail.
+NOTE: Actual database and browser testing must be done in your XAMPP setup.

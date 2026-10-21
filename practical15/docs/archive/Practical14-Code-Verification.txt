@@ -1,0 +1,8 @@
+Practical 14 verification scope:
+- Full project copied from practical13_PHP80_fixed.zip (contains PHP 8.0 fix).
+- PHP syntax lint on every PHP file.
+- Node --check on every JS file.
+- Audit writes and account toggles use mysqli prepared statements.
+- New entry URLs are /practical14/login.php and /practical14/admin.php.
+- SQL migration intended for an existing studenthub_db.
+- A live MySQL Windows/XAMPP browser CRUD run is NOT performed in this artifact build environment.

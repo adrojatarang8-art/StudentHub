@@ -1,0 +1,11 @@
+PRACTICAL 9 – REGISTRATION TEST REPORT (fill actual results after running XAMPP)
+
+Case 1: Valid data | Expected: Account created successfully; row inserted in user_accounts | Actual: __________ | Screenshot: Fig 1
+Case 2: Invalid email | Expected: Validation error; no row inserted | Actual: __________ | Screenshot: Fig 2
+Case 3: Weak password | Expected: Validation error; no row inserted | Actual: __________ | Screenshot: Fig 3
+Case 4: Duplicate email | Expected: Email is already registered; no row inserted | Actual: __________ | Screenshot: Fig 4
+Case 5: Duplicate username | Expected: Username is already taken; no row inserted | Actual: __________ | Screenshot: Fig 5
+Case 6: Password hash | Expected: Stored password_hash is NOT plaintext | Actual: __________ | Screenshot: Fig 6
+Case 7: Audit log | Expected: account_registered log row for new user | Actual: __________ | Screenshot: Fig 7
+
+Do not mark PASS until you actually perform the case. Keep test passwords private.

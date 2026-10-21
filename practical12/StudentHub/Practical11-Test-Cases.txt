@@ -1,0 +1,44 @@
+PRACTICAL 11 - TEST CASES / VERIFICATION SHEET
+==============================================
+Test environment: XAMPP, PHP 8.1+, MySQL or MariaDB, Chrome/Edge
+Page: http://localhost/practical11/student_directory.php
+Role needed: Admin
+
+# | Operation        | Test steps                     | Expected result                      | Actual result
+1 | SQL import       | Import practical11.sql         | 20 additional P11 rows; no loss    | To be verified
+2 | Read students    | Open student_directory.php     | Active records display, 10 per page| To be verified
+3 | CREATE student   | Enter unique valid details     | Green success; DB INSERT saved     | To be verified
+4 | CREATE duplicate | Repeat email/enrollment        | Error; no duplicate record         | To be verified
+5 | READ pagination  | Click Next / page 2            | Next 10 rows shown                 | To be verified
+6 | UPDATE student   | Click Edit -> Save Changes     | Edited fields visible in DB        | To be verified
+7 | Search name      | Search Patel                    | Matching names appear              | To be verified
+8 | Search email     | Search p11demo201@example.com  | One matching demo student          | To be verified
+9 | Search course    | Search B.Tech IT               | Course matches appear              | To be verified
+10| Course filter    | Choose B.Tech CSE -> Apply     | Only this course displays          | To be verified
+11| Status filter    | Choose Deleted -> Apply        | Only soft-deleted records display  | To be verified
+12| Delete cancel    | Delete -> Cancel dialog        | No status change                   | To be verified
+13| DELETE student   | Delete -> OK                   | status='deleted'; row preserved    | To be verified
+14| Restore student  | Deleted -> Restore             | status='active', deleted_at=NULL   | To be verified
+15| CSV export       | Apply filter -> Export CSV     | Matching rows in CSV file          | To be verified
+16| CSRF protection  | Submit POST with wrong token   | Error; no database write           | To be verified
+17| Unauthorized     | Student account opens P11 URL  | HTTP 403 Access Denied             | To be verified
+18| No session       | Open P11 URL after logout      | Redirect to secure login           | To be verified
+19| Re-import script | Reimport practical11.sql       | P11 demo rows not duplicated       | To be verified
+20| Validation       | Enter invalid semester/email  | Validations prevent insertion      | To be verified
+
+SCREENSHOT ORDER FOR PDF:
+Figure 1: Complete Student Management UI and total records
+Figure 2: Add Student form
+Figure 3: Successful CREATE result (new row)
+Figure 4: Students list with Pagination
+Figure 5: EDIT form and UPDATE result
+Figure 6: Search by Name / Email
+Figure 7: Course and Status filters
+Figure 8: DELETE browser confirmation
+Figure 9: Soft Deleted record in Deleted filter / phpMyAdmin
+Figure 10: RESTORE success
+Figure 11: CSV Export (optional extension)
+Figure 12: SQL students table structure / 20 seeded rows
+
+Submit this file filled with ACTUAL outcomes from your XAMPP testing,
+plus SQL dump and real screenshots. No unperformed tests are premarked pass.

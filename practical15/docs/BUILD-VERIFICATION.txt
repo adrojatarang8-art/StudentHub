@@ -1,0 +1,32 @@
+PRACTICAL 15 — SOURCE BUILD VERIFICATION (OFFLINE ENVIRONMENT)
+================================================================
+Prepared: 2026-10-21
+Source project: practical14.zip plus practical12.zip event poster module.
+
+Checks actually performed by the build assistant:
+PASS — Source extraction created exactly one top-level practical15 folder.
+PASS — PHP syntax checks: 31 files, zero parse errors (PHP CLI 8.4.24).
+PASS — JavaScript syntax checks: 6 files, zero parse errors (Node 22).
+PASS — Relative local HTML href/src path audit: zero missing referenced files.
+PASS — Existing DB SQL migration grep: no DROP, TRUNCATE, DELETE commands.
+PASS — PHP 8.0 API compatibility: no array_is_list() in JSON POST bootstrap.
+PASS — Integrated Practical12 actions call Practical14 audit helper.
+PASS — PHP built-in HTTP smoke tests:
+  GET / and /login.php => HTTP 200
+  admin.php, student_directory.php, event_management.php,
+  ajax_events.php, records.php, db_test.php, practical8.php
+    => HTTP 302 to login.php when logged out
+  GET /api/events_list.php when logged out => HTTP 401 JSON response
+  /css/practical15.css and /assets/student-avatar.svg => HTTP 200
+
+Not performed / NOT CLAIMED:
+- Windows XAMPP / Apache virtual host test
+- Live MySQL/MariaDB import, connection or CRUD test
+- Actual poster upload and audit log mutation test
+- Admin and student role test using user credentials
+- Screenshots and accessibility browser test
+- GitHub commit, push or repository validation
+
+IMPORTANT: PHP CLI environment here did NOT have MySQLi or PDO-MySQL modules.
+Complete database testing must run on user's XAMPP installation.
+Review docs/TEST-REPORT.md and fill in evidence from real local tests.

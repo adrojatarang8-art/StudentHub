@@ -1,0 +1,12 @@
+PRACTICAL 12 — STUDENTHUB EVENT MANAGEMENT
+========================================
+1) ZIP contains directly practical12/ (NO extra StudentHub folder).
+2) Extract into C:\xampp\htdocs\
+3) Start XAMPP Apache + MySQL.
+4) In phpMyAdmin, open EXISTING studenthub_db and import practical12.sql.
+5) Open http://localhost/practical12/login.php and sign in as admin.
+6) Open http://localhost/practical12/event_management.php
+7) Read README-Practical12.txt for tests and screenshot captions.
+
+Important: Use Practical12_Full_Install.sql ONLY if installing with a NEW database.
+Do NOT erase existing studenthub_db or use the old practical11 URL.

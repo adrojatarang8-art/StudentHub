@@ -1,0 +1,43 @@
+PRACTICAL 13 — TEST CASES / SCREENSHOTS / VIVA
+==============================================
+StudentHub PHP JSON API + AJAX/Fetch CRUD (Events)
+
+Test | Action | Expected evidence | Suggested figure
+-----|--------|-------------------|-----------------
+T01 | Import practical13.sql to studenthub_db | Green SQL success, preserved records | Fig 1
+T02 | Admin opens ajax_events.php | Dark event dashboard loads + stats | Fig 2
+T03 | F12 Network: Refresh List | GET events_list.php; HTTP 200 JSON array | Fig 3
+T04 | Submit valid event with AJAX | POST events_create.php HTTP 201; green notice and new row | Fig 4
+T05 | Edit same event; save | POST events_update.php HTTP 200; changed row | Fig 5
+T06 | Type part of event title | 300ms debounce; GET list; filtered row; no reload | Fig 6
+T07 | Select Category | Matching events, Network GET with category | Fig 7
+T08 | Delete newly created event | Confirmation, POST events_delete.php 200; row disappears | Fig 8
+T09 | Browser Network Response Preview | JSON success/message/data fields | Fig 9
+T10 | Invalid input | Validation error (client; server returns 422 on malformed valid-auth JSON) | Fig 10
+T11 | No-login API request | JSON 401 with LOGIN_REQUIRED / session message | Optional Fig 11
+T12 | Network tab after actions | GET + POST requests, no document reload | Optional Fig 12
+
+Do not claim untested screenshots/results in the report.
+If deletion reports HTTP 409, event is linked to registrations. Add your own
+NEW test event without registrations, then retry deletion on that test event.
+
+Theory quick answers:
+1. Endpoints return JSON with success/data/error fields and HTTP status codes.
+2. GET handles list/filter/stats; POST JSON handles add/update/delete.
+3. A loading spinner, success/error banner and API status provide feedback.
+4. Client and PHP validate input; MySQLi prepared statements avoid SQL injection.
+
+Result (use after passing tests):
+The StudentHub event module was integrated with secure PHP JSON API endpoints.
+Events could be retrieved, created, updated, deleted and searched using Fetch
+without full page reload, with validation, loading and API error feedback.
+
+Viva:
+- What is JSON? A lightweight text format used for data exchange.
+- What is AJAX? Data requests that update part of a page asynchronously.
+- What is Fetch API? JavaScript interface for HTTP requests/responses.
+- GET vs POST? GET retrieves; POST sends a request body for a write.
+- Why prepared statements? Prevents SQL injection with bound values.
+- Why HTTP 201? A new resource was created successfully.
+- What is debouncing? Wait briefly after typing before starting a request.
+- Why CSRF token? Protects authenticated write actions from forged requests.

@@ -1,0 +1,39 @@
+PRACTICAL 14: Open http://localhost/practical14/login.php then http://localhost/practical14/admin.php.
+Import practical14.sql into studenthub_db first.
+
+PRACTICAL 13 — START HERE (XAMPP / STUDENTHUB)
+==========================================
+This ZIP has ONLY ONE TOP-LEVEL FOLDER: practical13
+
+1. Extract practical13.zip DIRECTLY inside C:\xampp\htdocs\ .
+2. Confirm this file exists:
+   C:\xampp\htdocs\practical13\ajax_events.php
+3. Start Apache and MySQL in XAMPP.
+4. Open http://localhost/phpmyadmin/ .
+5. Choose existing studenthub_db database; Import -> practical13.sql -> Go.
+   Does NOT delete your previous students, events, registrations, or accounts.
+6. Open http://localhost/practical13/login.php .
+   Log in with your existing Practical 10/11 ADMIN username and password.
+   e.g. if you already used p10_admin01, use the same password you set.
+   NOTE: no default/demo password is included.
+7. Visit: http://localhost/practical13/ajax_events.php
+8. Click Refresh List; add a new demo event; edit; search; and delete the demo event.
+   F12 > Network > Fetch/XHR for GET/POST JSON screenshots.
+
+Direct UI: http://localhost/practical13/ajax_events.php
+GET API:   http://localhost/practical13/api/events_list.php
+
+For a BRAND NEW database only: Import Practical13_Full_Install.sql INSTEAD of
+practical13.sql. Create a new account using secure_account.php, then grant
+it admin role using phpMyAdmin as explained in README-Practical13.txt.
+
+READ README-Practical13.txt for step-by-step details.
+
+PHP 8.0 COMPATIBILITY PATCH (Oct 2026)
+------------------------------------
+POST Create/Update/Delete worked on PHP 8.1+ but were blocked on PHP 8.0
+by array_is_list() in api/bootstrap.php. This ZIP replaces it with a
+PHP 8.0-compatible check. No new SQL import is needed if P13 SQL was
+already imported. Extract into C:\xampp\htdocs, merging/replacing only
+the practical13 files; do not create practical13\practical13.
+A generic white section CSS rule is also overridden for dark dashboard.

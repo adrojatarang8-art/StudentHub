@@ -1,0 +1,20 @@
+PRACTICAL 13 — CODE VERIFICATION RECORD
+=======================================
+Completed in the package-building environment:
+- All PHP files passed `php -l` syntax checks.
+- js/practical13-events.js passed `node --check` syntax validation.
+- Direct GET to /api/events_list.php without login returned HTTP 401 JSON.
+- Direct GET to /api/events_create.php returned HTTP 405 JSON, Allow: POST.
+- Direct anonymous request to /ajax_events.php returned a login redirect.
+- All API and login session cookies resolve to the same practical13 folder path.
+- CSS /js files were verified accessible using a local PHP built-in server.
+- ZIP contains practical13/ajax_events.php and no extra outer directory.
+
+NOT yet verified in this environment (requires XAMPP + MySQL + browser):
+- Admin login against your actual `studenthub_db`.
+- MySQL INSERT/UPDATE/DELETE with the user's installed schema.
+- Full browser/Network-tab no-page-reload AJAX CRUD tests.
+- Visual rendering of UI on the user's XAMPP system.
+
+Capture original browser screenshots only after testing on localhost.
+See README-Practical13.txt and Practical13-Test-Cases.txt.

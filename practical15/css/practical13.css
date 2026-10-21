@@ -1,0 +1,84 @@
+/* Practical 13 extension: matches Practical 11's navy StudentHub dashboard. */
+.p13-body{background:linear-gradient(140deg,#0b1220 0%,#101a2b 55%,#090f1c 100%);color:#e7eefc;min-height:100vh}
+.p13-body *{box-sizing:border-box}
+.p13-body button,.p13-body input,.p13-body textarea,.p13-body select{font:inherit}
+.p13-header .p13-dot{color:#38bdf8}
+.p13-signedin{font-size:.79rem;color:#93a9c9;padding:7px}
+.p13-shell{width:min(96%,1580px);margin:32px auto 50px}
+.p13-lead{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.p13-eyebrow,.p13-panel-label{color:#8ccdfd;letter-spacing:.1em;font-size:.73rem;font-weight:800}
+.p13-lead h2{font-size:clamp(1.7rem,3vw,2.35rem);letter-spacing:-.03em;margin:8px 0;color:#f8fafc}
+.p13-lead p,.p13-muted{color:#a6b9d4;margin:0;font-size:.9rem}
+.p13-actions{display:flex;gap:9px;flex-wrap:wrap}
+.p13-primary,.p13-outline{border-radius:9px;border:1px solid #3a5173;padding:11px 16px;font-weight:750;cursor:pointer;min-height:42px}
+.p13-primary{background:#4166e5;color:#fff;border-color:#4166e5}
+.p13-outline{background:#1b2a45;color:#caddf9}
+.p13-outline:hover,.p13-primary:hover{filter:brightness(1.13)}
+.p13-body button:disabled{opacity:.62;cursor:not-allowed}
+.p13-message{border-radius:8px;padding:13px 15px;margin:0 0 18px;border-left:4px solid #5ee6a0;background:#1d3d34;color:#b6fdd9;font-size:.9rem}
+.p13-message[hidden]{display:none}
+.p13-message[data-type="error"]{background:#49242e;color:#fecdd3;border-color:#f87171}
+.p13-message[data-type="info"]{background:#1d3b58;color:#bce0fd;border-color:#60a5fa}
+.p13-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:20px}
+.p13-stat{min-height:111px;padding:17px 21px;border:1px solid #30435f;background:#1a273f;border-radius:11px}
+.p13-stat span,.p13-stat small{display:block;color:#a5b7d1;font-size:.81rem}
+.p13-stat strong{display:block;font-size:1.75rem;color:#fff;margin:5px 0;line-height:1.3}
+.p13-stat strong.p13-api-state{font-size:1.35rem;color:#a7f3d0}
+.p13-stat strong[data-loading="true"]{color:#93c5fd}
+.p13-stat small{font-size:.7rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.p13-grid{display:grid;grid-template-columns:minmax(310px,360px) minmax(0,1fr);gap:18px;align-items:start}
+.p13-panel{border:1px solid #314361;background:#1a263e;border-radius:13px;padding:22px}
+.p13-panel h3{margin:7px 0 3px;font-size:1.2rem;color:#f8fafc}
+.p13-section-title{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.p13-edit-badge,.p13-count{display:inline-block;border:1px solid #45617d;border-radius:50px;padding:5px 11px;color:#9bd6ff;font-size:.75rem;white-space:nowrap}
+.p13-edit-badge[hidden]{display:none}
+.p13-editor .p13-muted{font-size:.8rem;line-height:1.5;margin:5px 0 18px}
+.p13-editor form{display:grid;gap:8px}
+.p13-editor label,.p13-filters label{display:block;color:#d1def3;font-weight:750;font-size:.79rem;margin:12px 0 5px}
+.p13-editor label span{color:#fda4af}
+.p13-editor input,.p13-editor textarea,.p13-editor select,.p13-filters input,.p13-filters select{width:100%;border:1px solid #445676;background:#121e31;color:#f8fafc;border-radius:8px;min-height:43px;padding:10px 12px;outline:none}
+.p13-editor textarea{resize:vertical;min-height:96px}
+.p13-editor input:focus,.p13-editor textarea:focus,.p13-editor select:focus,.p13-filters input:focus,.p13-filters select:focus{border-color:#70a4ff;box-shadow:0 0 0 2px #30518a}
+.p13-editor input::placeholder,.p13-editor textarea::placeholder,.p13-filters input::placeholder{color:#8096b6}
+.p13-two-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.p13-form-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.p13-full{flex:1;min-width:150px}
+.p13-results-title{margin-bottom:14px}
+.p13-filters{display:grid;grid-template-columns:minmax(190px,2fr) minmax(120px,1fr) auto;align-items:end;gap:10px;margin:0 0 20px}
+.p13-filters label{margin:0 0 7px}
+.p13-loading{display:flex;align-items:center;gap:10px;margin:-6px 0 12px;color:#93c5fd;font-size:.85rem}
+.p13-loading[hidden]{display:none}
+.p13-spinner{width:17px;height:17px;border:2px solid #435878;border-top-color:#93c5fd;border-radius:50%;animation:p13-spin .9s linear infinite}
+@keyframes p13-spin{to{transform:rotate(360deg)}}
+.p13-tablewrap{width:100%;overflow:auto;border:1px solid #354a69;border-radius:9px}
+.p13-table{border-collapse:collapse;width:100%;min-width:650px;font-size:.82rem}
+.p13-table th{background:#283e5d;color:#e2e8f0;text-align:left;font-size:.73rem;text-transform:uppercase;letter-spacing:.04em;padding:14px 11px;white-space:nowrap}
+.p13-table td{border-top:1px solid #2d4361;padding:14px 11px;vertical-align:middle;background:#17243b;color:#e2e8f0}
+.p13-table tbody tr:nth-child(even) td{background:#1d2b45}
+.p13-table td small{display:block;color:#9cadc9;margin-top:6px;max-width:330px;overflow-wrap:anywhere;line-height:1.4}
+.p13-table td strong{color:#f8fafc}
+.p13-col-id{font-weight:800;color:#93c5fd!important}
+.p13-tag{display:inline-block;background:#193f49;border-radius:30px;color:#99e6d7;padding:5px 10px;font-weight:700;font-size:.73rem}
+.p13-row-actions{display:flex;gap:7px;align-items:center}
+.p13-row-actions button{font-weight:750;font-size:.75rem;border:0;border-radius:6px;padding:8px 10px;cursor:pointer}
+.p13-edit-btn{background:#2d496b;color:#bfdbfe}
+.p13-delete-btn{background:#522f39;color:#fecdd3}
+.p13-empty{text-align:center;padding:38px!important;color:#aabbd2!important}
+.p13-listfoot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:9px;margin-top:16px;font-size:.78rem;color:#9ab0cd}
+.p13-small-tip{color:#88a2c7}
+.p13-details{background:#142238;border:1px solid #2d405d;border-radius:10px;margin-top:19px;padding:16px 21px;color:#b8cbe4}
+.p13-details summary{cursor:pointer;color:#dceaff;font-weight:700;font-size:.87rem}
+.p13-details p{font-size:.81rem;line-height:1.7}
+.p13-endpoint-list{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}
+.p13-endpoint-list code{background:#223653;border-radius:6px;padding:8px;color:#a8dafa}
+.p13-footer{text-align:center;color:#8197b5;font-size:.76rem;margin:23px auto}
+@media(max-width:1100px){.p13-grid{grid-template-columns:1fr}.p13-stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.p13-filters{grid-template-columns:1fr}.p13-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.p13-shell{width:94%}.p13-lead{align-items:start}}
+@media(max-width:450px){.p13-stats{grid-template-columns:1fr 1fr;gap:7px}.p13-stat{padding:11px;min-height:95px}.p13-stat strong{font-size:1.3rem}.p13-panel{padding:14px}.p13-two-fields{grid-template-columns:1fr}}
+
+/* Practical 13: override generic StudentHub section {background:white} rules. */
+.p13-body section.p13-lead,
+.p13-body section.p13-stats {
+  background: transparent; border: 0; box-shadow: none;
+  padding: 0; border-radius: 0;
+}

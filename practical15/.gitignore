@@ -1,0 +1,27 @@
+# Local secrets and runtime configuration
+.env
+.env.*
+!.env.example
+*.log
+*.bak
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/
+vendor/
+# Exclude P7 personally identifying form submissions and credentials
+/data/registrations.csv
+/data/registrations.json
+# Keep upload directory skeleton, not user-uploaded photos
+/uploads/event_posters/*
+!/uploads/event_posters/.htaccess
+!/uploads/event_posters/README.txt
+# Development artifacts / exports (avoid publishing personal data)
+*.zip
+*database_backup*.sql
+*live_dump*.sql
+/screenshots/
+!/screenshots/.gitkeep

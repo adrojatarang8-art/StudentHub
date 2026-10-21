@@ -1,0 +1,15 @@
+PRACTICAL 15 — STUDENTHUB FINAL INTEGRATION
+===========================================
+ROOT: C:\xampp\htdocs\practical15\  (no double folder)
+HOME: http://localhost/practical15/
+LOGIN: http://localhost/practical15/login.php
+ADMIN: http://localhost/practical15/admin.php
+POSTER CRUD: http://localhost/practical15/event_management.php
+AJAX CRUD: http://localhost/practical15/ajax_events.php
+STUDENT CRUD: http://localhost/practical15/student_directory.php
+
+EXISTING studenthub_db: Import practical15.sql (safe migration) in phpMyAdmin.
+NEW empty database: Import sql/Practical15_Fresh_Install.sql instead.
+USE your OWN existing admin password. No password is embedded.
+Read README.md, DEPLOYMENT.md, GITHUB_SUBMISSION.md, docs/TEST-REPORT.md.
+Actual Windows XAMPP and GitHub submission are user-side steps.
