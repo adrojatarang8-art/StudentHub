@@ -1,0 +1,89 @@
+/* Practical 12: consistent with StudentHub Practical 11 dark theme */
+.p12-body{background:#0b1020;color:#eff6ff;min-height:100vh}
+.p12-slash{color:#60a5fa}.p12-admin{font-size:.8rem;color:#94a3b8}
+.p12-shell{max-width:1480px}.p12-intro{margin-bottom:18px}.p12-intro p{color:#9fb2ce}
+.p12-guide{border-radius:8px;padding:10px 15px;background:#116b69;color:white;text-decoration:none;font-weight:650;font-size:.85rem}
+.p12-grid{display:grid;grid-template-columns:minmax(285px,350px) minmax(0,1fr);gap:16px;align-items:start}
+.p12-body .p11-panel{background:#1b263f;border:1px solid #344765;border-radius:13px;padding:22px;box-sizing:border-box}
+.p12-form-card{max-width:100%}.p12-list-card{min-width:0}
+.p12-kicker{font-size:.71rem;font-weight:750;letter-spacing:.12em;color:#7fc7ff;margin-bottom:12px}
+.p12-body h3{font-size:1.15rem;margin:2px 0 13px;color:#fff}
+.p12-form-card>p{color:#aabbd3;font-size:.81rem;line-height:1.6;margin-top:0;margin-bottom:18px}
+.p12-event-form{display:flex;flex-direction:column;gap:10px}
+.p12-event-form label,.p12-filters label{font-size:.79rem;font-weight:680;color:#d9e7fb}
+.p12-event-form label b{color:#fb7185}
+.p12-body .p12-event-form input:not([type=checkbox]):not([type=file]),.p12-body .p12-event-form select,.p12-body .p12-event-form textarea,.p12-body .p12-filters input,.p12-body .p12-filters select{box-sizing:border-box;width:100%;background:#111b2e;border:1px solid #425473;border-radius:7px;color:#edf4ff;padding:10px 11px;font:inherit;font-size:.87rem;min-height:40px}
+.p12-body .p12-event-form textarea{resize:vertical;line-height:1.5;min-height:82px}
+.p12-body .p12-event-form input[type=file]{font-size:.77rem;color:#c7daef;max-width:100%;overflow:hidden}
+.p12-event-form input[type=file]::file-selector-button{background:#334d73;color:white;border:0;border-radius:6px;padding:9px;margin-right:10px;cursor:pointer}
+.p12-form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.p12-form-row>div{min-width:0;display:flex;flex-direction:column;gap:10px}
+.p12-help{color:#a2b9d4;font-size:.73rem;line-height:1.5}
+.p12-primary{border:0;border-radius:8px;background:#4269e9;color:white;min-height:41px;cursor:pointer;font-weight:750;margin-top:8px}
+.p12-primary:hover,.p12-filters button:hover{background:#3157cc}
+.p12-cancel{display:block;text-align:center;font-size:.84rem;color:#c8d9fa;padding:5px;text-decoration:none}
+.p12-poster-current{display:flex;align-items:center;gap:10px;flex-wrap:wrap;border:1px dashed #425473;padding:10px;border-radius:8px}
+.p12-poster-current img{width:78px;height:78px;object-fit:cover;border-radius:7px}
+.p12-checkbox{display:flex;gap:8px;align-items:center;cursor:pointer}
+.p12-preview{border:1px dashed #50729f;border-radius:8px;padding:10px}.p12-preview span{display:block;color:#b6d6ef;font-size:.76rem;margin-bottom:8px}
+.p12-preview img{max-width:100%;max-height:140px;border-radius:5px}
+.p12-section-heading{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.p12-counter{white-space:nowrap;padding:5px 9px;border:1px solid #385779;color:#a7c9ff;border-radius:100px;font-size:.75rem}
+.p12-filters{display:grid;grid-template-columns:minmax(190px,1.5fr) minmax(120px,1fr) minmax(112px,.7fr) auto;gap:9px;align-items:end;margin:21px 0}
+.p12-filters>div{display:flex;flex-direction:column;gap:8px;min-width:0}
+.p12-filter-buttons{flex-direction:row!important;gap:6px!important;align-items:center}.p12-filter-buttons button{background:#4269e9;color:white;border:0;border-radius:7px;padding:11px 12px;cursor:pointer;font-weight:700}
+.p12-filter-buttons a{background:#31415d;color:#dbeafe;border-radius:7px;text-decoration:none;padding:11px 12px;font-size:.81rem}
+.p12-table{min-width:755px}.p12-small-poster{display:flex;align-items:center;justify-content:center;background:#253752;border:1px solid #3b4a67;width:68px;height:56px;border-radius:6px;margin-bottom:5px;overflow:hidden}
+.p12-small-poster img{width:100%;height:100%;object-fit:cover}.p12-small-poster span{font-size:1.35rem}
+.p12-table td small{line-height:1.55}.p12-table td strong{font-size:.85rem}.p12-table .p11-row-actions{white-space:nowrap}
+.p12-closed{background:#4e3c30;color:#ffd8a8}.p12-delete-form button:disabled{opacity:.42;cursor:not-allowed}
+.p12-info{color:#a6bbd3;font-size:.77rem;margin:14px 0 0}
+.p12-audit{margin-top:16px;overflow:hidden}.p12-audit table{min-width:600px}
+@media(max-width:1240px){.p12-grid{grid-template-columns:minmax(265px,320px) minmax(0,1fr)}.p12-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.p12-filter-buttons{align-self:end}}
+@media(max-width:800px){.p12-grid{grid-template-columns:1fr}.p12-form-card{width:100%}.p12-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.p12-filters{grid-template-columns:1fr}.p12-form-row{grid-template-columns:1fr}}
+
+/* Darken the event-page introduction: generic `section` in style.css was white. */
+.p12-body section.p12-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: linear-gradient(120deg, #1b263f 0%, #19263c 100%);
+    color: #eff6ff;
+    border: 1px solid #344765;
+    border-radius: 13px;
+    padding: 24px 26px;
+    margin: 0 0 18px;
+    box-shadow: 0 10px 28px rgba(0,0,0,.13);
+}
+.p12-body section.p12-intro h2 {
+    color: #f8fafc;
+    font-weight: 750;
+    text-shadow: none;
+}
+.p12-body section.p12-intro p {
+    color: #b5c8e0;
+    opacity: 1;
+    margin: 0;
+}
+.p12-body section.p12-intro .p10-eyebrow {
+    color: #93c5fd;
+}
+.p12-body section.p12-intro .p11-outline-btn {
+    background: #273955;
+    color: #dbeafe;
+    border-color: #405b80;
+}
+.p12-body section.p12-intro .p12-guide {
+    background: #0f766e;
+    color: #fff;
+}
+.p12-body section.p12-intro .p11-top-actions a:focus-visible {
+    outline: 2px solid #93c5fd;
+    outline-offset: 3px;
+}
+@media (max-width:600px) {
+    .p12-body section.p12-intro { padding: 19px 17px; }
+    .p12-body section.p12-intro h2 { font-size: 1.55rem; }
+}

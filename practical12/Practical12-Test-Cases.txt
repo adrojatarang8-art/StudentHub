@@ -1,0 +1,60 @@
+PRACTICAL 12 - EVENT MANAGEMENT TEST CASES (EXECUTE IN XAMPP)
+=============================================================
+Test cases below specify REQUIRED STEPS and EXPECTED results, NOT claims that
+these actions were already executed on your computer. Capture screenshots.
+
+TC01  Admin Access
+  Login using your Practical 11 admin account; open event_management.php.
+  EXPECTED: Event Management page is visible.
+
+TC02  Student Role Restriction
+  Login as a student and open event_management.php.
+  EXPECTED: HTTP 403 Access denied; no event CRUD access.
+
+TC03  Existing Events Loaded (SELECT)
+  After importing practical12.sql, inspect event list.
+  EXPECTED: Existing events and P12 sample records visible, original data retained.
+
+TC04  Add Event (INSERT)
+  Add title 'Practical 12 Test Workshop', date 2026-11-26,
+  venue Computer Lab 3, Workshop, description and Open status.
+  EXPECTED: Green success notification; new event visible.
+
+TC05  Valid Poster Upload
+  Edit this event and choose a REAL JPEG or PNG (<2 MiB).
+  EXPECTED: Success notification, poster thumbnail visible in event table.
+
+TC06  Edit Event (UPDATE)
+  Edit your test event: venue 'Seminar Hall B', status 'Closed'.
+  EXPECTED: Green success notification; changed values visible.
+
+TC07  Category + Open/Closed Filter (SELECT)
+  Choose Workshop and Closed, click Apply.
+  EXPECTED: Only matching events appear. Reset shows all records.
+
+TC08  Delete Confirmation (DELETE)
+  Click Delete on an unregistered test event.
+  EXPECTED: Native browser confirmation dialog; Cancel preserves event.
+  Confirm and check success notification and missing event row.
+
+TC09  Invalid Poster Format
+  Upload .txt or a fake image file using the Create/Edit form.
+  EXPECTED: Error; uploaded file is not accepted; old poster stays unchanged.
+
+TC10  Mandatory Field Validation
+  Clear title or enter invalid date (when browser allows), click Save.
+  EXPECTED: Browser/PHP validation rejects invalid input.
+
+TC11  Registration-Safe Delete
+  Try to delete a seeded event that already has registrations.
+  EXPECTED: Delete button disabled or backend blocks deletion; data preserved.
+
+TC12  Audit Log
+  Check event_audit_log in phpMyAdmin after successful add/update/delete.
+  EXPECTED: action, actor_user_id, event_id, details and timestamp saved.
+
+OPTIONAL TC13 Poster >2MiB Size Validation
+  EXPECTED: Friendly error. NOT REQUIRED if not tested.
+
+SUBMISSION: practical12.sql, CRUD browser screenshots, upload validation
+screenshots, and main event_management.php + p12_events_helpers.php files.

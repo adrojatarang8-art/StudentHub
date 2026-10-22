@@ -1,0 +1,56 @@
+STUDENTHUB - PRACTICAL 10 TEST REPORT (TO FILL AFTER RUNNING IN XAMPP)
+======================================================================
+Objective: Verify secure login/logout, sessions, role-based access,
+          session timeout, last-login timestamp and remember-me tokens.
+
+Case 1 - VALID STUDENT LOGIN
+Input: Registered student username/email + correct password
+Expected: Authenticated; redirect to dashboard.php; last_login_at updates.
+Actual observation: ___________________  Result: _____  Fig: 1
+
+Case 2 - INCORRECT PASSWORD
+Input: Registered user + wrong password
+Expected: Generic error; no dashboard access; audit login_failed.
+Actual observation: ___________________  Result: _____  Fig: 2
+
+Case 3 - LOGOUT
+Input: Valid login -> click Log out securely
+Expected: Session destroyed; redirect to login with logout message;
+          dashboard inaccessible until next login; browser token revoked.
+Actual observation: ___________________  Result: _____  Fig: 3
+
+Case 4 - UNAUTHORIZED DIRECT ACCESS (GUEST)
+Input: No login; directly visit dashboard.php and admin.php
+Expected: Redirect to login.php with login-required notice.
+Actual observation: ___________________  Result: _____  Fig: 4
+
+Case 5 - ROLE-BASED RESTRICTION
+Input: Student account; directly enter admin.php in address bar
+Expected: HTTP 403 access-denied page (no admin statistics shown).
+Actual observation: ___________________  Result: _____  Fig: 5
+
+Case 6 - SESSION TIMEOUT
+Input: Set AUTH_IDLE_TIMEOUT to 60 temporarily; no remember-me;
+       login then stay idle for >60 seconds and refresh dashboard.php
+Expected: Redirect to login.php with "Your session expired...".
+Actual observation: ___________________  Result: _____  Fig: 6
+
+Case 7 - ADMIN LOGIN AND REDIRECTION
+Input: Admin account (manually promoted with trusted SQL), valid password
+Expected: Redirect to admin.php; counts and audit-log table displayed.
+Actual observation: ___________________  Result: _____  Fig: 7
+
+Case 8 - REMEMBER-ME (ADVANCED)
+Input: Check Remember me; inspect cookies and remember_tokens in phpMyAdmin
+Expected: HttpOnly cookie; hashed token DB entry; token rotates when used;
+          logout deletes browser's DB token and browser cookie.
+Actual observation: ___________________  Result: _____  Fig: 8
+
+Case 9 - PASSWORD VERIFICATION
+Input: Check user_accounts.password_hash, log in with corresponding password
+Expected: Password is hashed and password_verify() accepts only correct input.
+Actual observation: ___________________  Result: _____  Fig: 9
+
+VERDICT: Not yet tested in the user's XAMPP environment.
+Complete the Actual observation and Result fields ONLY after performing tests.
+Do not claim PASS or supply generated fake XAMPP screenshots.
